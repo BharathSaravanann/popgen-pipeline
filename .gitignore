@@ -1,0 +1,11 @@
+work/
+.nextflow/
+.nextflow.log*
+results/
+*.vcf.gz
+*.vcf.gz.tbi
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+*.swp
