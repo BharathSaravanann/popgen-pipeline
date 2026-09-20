@@ -26,7 +26,7 @@ Each box is its own Nextflow process, running in its own Docker container.
 - Build the report image once (not pushed anywhere, built from the Dockerfile in this repo):
 
   ```bash
-  In Repo containers/Dockerfile
+  In Repo containers/
   docker build -t popgen-report:1.0 .
   ```
 
@@ -108,7 +108,7 @@ Kinship classification (KING thresholds):
 |---|---|
 | QC_FILTER, CONVERT_TO_BED, LD_PRUNE, KINSHIP | `ghcr.io/pgscatalog/plink2:2.00a5.10` |
 | ROH_ANALYSIS | `quay.io/biocontainers/plink:1.90b6.21--h779adbc_1` |
-| REPORT | `popgen-report:1.0` (built locally, `containers/report/Dockerfile`) |
+| REPORT | `popgen-report:1.0` (built locally, `containers/Dockerfile`) |
 
 ROH uses plink1.9 instead of plink2 since `--homozyg` there is the original,
 more predictable implementation.
