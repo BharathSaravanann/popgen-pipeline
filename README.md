@@ -36,9 +36,9 @@ Each box is its own Nextflow process, running in its own Docker container.
 
 ```bash
 git clone <this-repo-url>
-cd popgen-pipeline
-docker build -t popgen-report:1.0 containers/
-
+cd popgen-pipeline/container
+docker build -t popgen-report:1.0 .
+cd ../
 nextflow run main.nf -profile docker \
   --vcf /path/to/popgen_test_chr22.vcf.gz \
   --outdir results/
@@ -121,7 +121,6 @@ popgen-pipeline/
 ├── nextflow.config
 ├── modules/
 │   ├── qc_filter.nf
-│   ├── convert_bed.nf
 │   ├── roh_analysis.nf
 │   ├── ld_prune.nf
 │   ├── kinship.nf
@@ -130,3 +129,7 @@ popgen-pipeline/
 ├── containers/Dockerfile
 └── README.md
 ```
+Plot generated from sample dataset on FROH & Kinship relationship degree
+
+<img width="2100" height="900" alt="summary_plots" src="https://github.com/user-attachments/assets/3a42ce32-580a-4211-89b8-fba2268dd410" />
+
