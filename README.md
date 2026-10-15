@@ -36,7 +36,7 @@ Each box is its own Nextflow process, running in its own Docker container.
 
 ```bash
 git clone <this-repo-url>
-cd popgen-pipeline/container
+cd popgen-pipeline/containers
 docker build -t popgen-report:1.0 .
 cd ../
 nextflow run main.nf -profile docker \
